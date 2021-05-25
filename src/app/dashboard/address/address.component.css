@@ -1,0 +1,40 @@
+#icon{
+  height: 200px;
+}
+
+.save{
+  font-weight: bold;
+  margin-left: 130px;
+}
+.noAddress-subHeading{
+  margin-left: 60px;
+}
+.mat-button{
+  margin-left: 160px;
+}
+
+
+.btn{
+  margin-left: 180px;
+}
+
+
+.modal-title{
+  margin-left: 198px;
+  font-size: large;
+  font-weight: bold;
+}
+
+.modal-footer{
+  margin-left: 10px;
+  height: 120px;
+}
+
+#save{
+  width: 100% !important;
+  height: 40px;
+}
+#close{
+  width: 100% !important;
+  height: 40px;
+}
