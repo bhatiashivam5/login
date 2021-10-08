@@ -4,7 +4,7 @@
 
 .save{
   font-weight: bold;
-  margin-left: 130px;
+  margin-left: 155px;
 }
 .noAddress-subHeading{
   margin-left: 60px;
@@ -13,7 +13,9 @@
   margin-left: 160px;
 }
 
-
+.img{
+  margin-left: 6%;
+}
 .btn{
   margin-left: 180px;
 }
@@ -38,3 +40,8 @@
   width: 100% !important;
   height: 40px;
 }
+
+.address1{
+  margin: 0;
+}
+

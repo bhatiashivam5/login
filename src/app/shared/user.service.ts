@@ -12,7 +12,14 @@ export class UserService {
     lname: '',
     email: '',
     contact: '',
-    password: ''
+    password: '',
+    // Fname: '',
+    // Lname: '',
+    // Address1: '',
+    // Address2: '',
+    // City: '',
+    // State: '',
+    // Zip: ''
   }
 
   public Useradd: Useradd = {
@@ -38,9 +45,9 @@ export class UserService {
     return this.http.post('http://localhost:3000/auth', existUser);
   }
 
-  //to store user address
+  // to store user address
   address(address: Useradd) {
-    return this.http.post('http://localhost:3000/address', address);
+    return this.http.put('http://localhost:3000/address', address);
   }
 
 
@@ -90,7 +97,7 @@ export class UserService {
 
   }
 
-  isLoggedIn() {
+  isloggedIn() {
     var userpayload = this.getPayload();
     if (userpayload) {
       return userpayload.exp > Date.now() / 10000;

@@ -214,12 +214,18 @@
       mat-raised-button
       color="primary"
 
+
     >
       Submit</button>&nbsp;&nbsp;
-    <button type="submit" mat-raised-button color="primary">Clear</button>
-  </form>
-  <br /><br />
+    <button type="submit" (click)="closeAlert()" mat-raised-button color="primary">Clear</button>
+  </form><br><br>
+  <div *ngIf="alert" class="alert alert-info alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    User Registered successfully!
   </div>
+
+  </div>
+
 </mat-card>
 </div>
   </div>

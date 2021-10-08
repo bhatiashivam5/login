@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterComponent } from './register/register.component';
 import { LogoutComponent } from './logout/logout.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { AuthGuard } from './shared/auth.guard';
+
 
 const routes: Routes = [
   {
@@ -16,18 +17,14 @@ const routes: Routes = [
     component:RegisterComponent
   },
   {
-    path:'dashboard',
-    component:DashboardComponent
-  },
-  {
     path:'logout',
     component:LogoutComponent
   },
   {
     path:'forgot',
-    component:ForgotPasswordComponent
-  }
-
+    component:ForgotPasswordComponent,
+    canActivate:[AuthGuard]
+  },
 ];
 
 @NgModule({
@@ -35,3 +32,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+

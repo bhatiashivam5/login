@@ -23,12 +23,14 @@ import { DashboardComponent } from './dashboard/dashboard.component'
 import { DashboardRoutingModule} from './dashboard/dashboard-routing.module';
 import { SidenavComponent } from './dashboard/sidenav/sidenav.component';
 import { LogoutComponent } from './logout/logout.component';
-import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 import { AddressComponent } from './dashboard/address/address.component';
 import { ProfileComponent } from './dashboard/profile/profile.component';
 // Forms and Reactive Forms Modules
 import {ReactiveFormsModule } from '@angular/forms';
-import { ForgotPasswordComponent } from './forgot-password/forgot-password.component'
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { VendorsLoginComponent } from './vendors-login/vendors-login.component'
+
+
 
 
 
@@ -42,10 +44,10 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     DashboardComponent,
     SidenavComponent,
     LogoutComponent,
-    AdmindashboardComponent,
     AddressComponent,
     ProfileComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    VendorsLoginComponent
   ],
   imports: [
     BrowserModule,

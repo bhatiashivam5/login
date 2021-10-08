@@ -12,6 +12,8 @@ export class RegisterComponent implements OnInit {
     confirmpassword:'',
      terms:false
  }
+ form: any;
+ alert:boolean = false;
   constructor( public userservice:UserService) { }
 
   ngOnInit(): void {
@@ -19,11 +21,22 @@ export class RegisterComponent implements OnInit {
   addData(f:NgForm)
   {
       console.log(f.value);
+      // if(this.form.valid){
+      //   console.log("Form Submitted!");
+      //   this.form.reset();
+      // }
+
      this.userservice.register(f.value).subscribe((res)=>{
       console.log(res);
-      alert('Register successfully');
-    },(err)=>{
+      this.alert = true;
+      },(err)=>{
       console.log(err);
     })
+    f.resetForm();
   }
+
+  closeAlert(){
+    this.alert = false;
+  }
+
 }

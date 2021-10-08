@@ -17,7 +17,14 @@ module.exports.addRegister=(req,res)=>{
       lname:req.body.lname,
       email:req.body.email,
       contact:req.body.contact,
-      password:req.body.password
+      password:req.body.password,
+      Fname:req.body.Fname,
+      Lname:req.body.Lname,
+      Address1:req.body.Address1,
+      Address2:req.body.Address2,
+      City:req.body.City,
+      State:req.body.State,
+      Zip:req.body.Zip
   });
 
   rgData.save().then((docs)=>{

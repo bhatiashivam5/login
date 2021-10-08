@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
       // console.log(this.userdata.token);
       // console.log(this.userdata.user._id);
  this.userservice.setToken(this.userdata.token);
-//  this.userservice.setuserId(this.userdata.user._id);
+  this.userservice.setuserId(this.userdata.user._id);
       this.router.navigateByUrl('/dashboard');
 
 

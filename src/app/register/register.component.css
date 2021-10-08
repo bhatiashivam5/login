@@ -1,10 +1,11 @@
 
 #content1{
-  margin-top: 5%;
+  margin-top: 3%;
 }
 
 #content2{
-  margin-top: 5% !important;
+  margin-top: 3% !important;
+  width: 100% !important;
 }
 
 .mat-toolbar{
@@ -21,17 +22,22 @@
   width:100% !important;
 }
 .mat-form-field{
-  width: 200px;
+  width: 240px;
 
+}
+
+.row{
+  object-fit: cover;
 }
 
 .img{
   width: 100%;
-  height: 95%;
+  height:98%;
 }
 .mat{
-  height: 95%;
-  width: 100%;
+ width: 100%;
+  height: 98%;
+
 }
 .span{
   float: right;
@@ -62,3 +68,8 @@
   background-color:rgb(34, 36, 36) ;
 }
 
+
+.mat-input-element {
+  color: rgb(34, 36, 36) !important;
+  /* caret-color: black; */
+}

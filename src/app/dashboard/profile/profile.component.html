@@ -1,6 +1,6 @@
 <div class="container-fluid">
 
-  <table class="table table-stripped">
+  <!-- <table class="table table-stripped">
     <tr>
       <th>Fname</th>
       <th>Lname</th>
@@ -15,6 +15,47 @@
       <td>{{userinfo.contact}}</td>
     </tr>
 
-  </table>
+  </table> -->
+  <div class="row1">
 
+<mat-card>
+
+  <mat-toolbar class="btn-dark">PROFILE DETAILS</mat-toolbar>
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+    <div class="row">
+      <div class="col-md-6" id="label">
+        <label>First Name</label>
+      </div>
+      <div class="col-md-6">
+        <p>{{userinfo.fname}}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6" id="label">
+        <label>Last Name</label>
+      </div>
+      <div class="col-md-6">
+        <p>{{userinfo.lname}}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6" id="label">
+        <label>Email</label>
+      </div>
+      <div class="col-md-6">
+        <p>{{userinfo.email}}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6" id="label">
+        <label>Contact</label>
+      </div>
+      <div class="col-md-6">
+        <p>{{userinfo.contact}}</p>
+      </div>
+    </div>
+    <button type="submit" class="btn-dark" id="btn" mat-raised-button >Edit Profile</button>
   </div>
+  </mat-card>
+  </div>
+</div>

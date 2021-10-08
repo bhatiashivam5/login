@@ -4,6 +4,13 @@ export class User {
   email!:string;
   contact!:string;
   password!:string;
+  // Fname!:string;
+  // Lname!:string;
+  // Address1!:string;
+  // Address2!:string;
+  // State!:string;
+  // City!:string;
+  // Zip!:string;
 }
 
 export class loginUser{

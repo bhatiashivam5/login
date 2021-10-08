@@ -1,6 +1,6 @@
 <div class="page-fullWidthComponent">
   <div class="noAddress-card">
-    <img src="../../../assets/dashboard/img/download3.png" alt="Address" width="400" height="350">
+    <img src="../../../assets/address.png" alt="Address" width="400" height="350" class="img">
 
     <div class="noAddress-infoText">
       <div class="save">SAVE YOUR ADDRESSES NOW</div><br>
@@ -29,10 +29,9 @@
       </div>
       <div class="modal-body">
         <form name="form" class="form" #userform="ngForm"
-        (ngSubmit)="addAddress(userform)" noValidate>
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <label for="inputFname">First Name</label>
+         noValidate>
+          <div class="form-row1">
+
               <input
               type="text" id="inputEmail4" class="form-control"
               matInput
@@ -40,40 +39,38 @@
               [(ngModel)]="userservice.Useradd.Fname"
               name="Fname"
               #Fname="ngModel"
-              placeholder="First Name"
+              value={{userinfo.fname}} readonly
               ngModelname="Fname"
               [ngClass]="{ 'is-invalid': userform.submitted && Fname.invalid }"
               minlength="5">
+              <!-- mat error -->
+              <mat-error *ngIf="userform.submitted && Fname.invalid">
+              <mat-error *ngIf="Fname.errors?.required">
+                  First Name should be enter
+                  </mat-error>
 
-               <!-- mat error -->
-    <mat-error *ngIf="userform.submitted && Fname.invalid">
-      <mat-error *ngIf="Fname.errors?.required">
-       First Name should be enter
-      </mat-error>
-
-      <mat-error *ngIf="Fname.errors?.minlength">
-       Name must be at least 5 characters long.
-      </mat-error>
-    </mat-error>
-    <br><br>
-            </div>
+                  <mat-error *ngIf="Fname.errors?.minlength">
+                   Name must be at least 5 characters long.
+                 </mat-error>
+              </mat-error>
+    <br>
 
 
-            <div class="form-group col-md-6">
-              <label for="inputLname">Last Name</label>
+
+
               <input type="text" class="form-control" id="inputPassword4"
               matInput
               required
               [(ngModel)]="userservice.Useradd.Lname"
               name="Lname"
               #Lname="ngModel"
-              placeholder="Last Name"
+              value={{userinfo.lname}} readonly
               ngModelname="Lname"
               [ngClass]="{ 'is-invalid': userform.submitted && Lname.invalid }"
               minlength="5">
-            </div>
 
-          <div class="form-group">
+<br>
+
            <label for="inputAddress">Address 1</label>
            <input type="text" class="form-control" id="inputAddress" placeholder="House/Flat/Plot No"
               matInput
@@ -84,8 +81,7 @@
               ngModelname="Address1"
               [ngClass]="{ 'is-invalid': userform.submitted && Address1.invalid }"
               minlength="15">
-          </div>
-          <div class="form-group">
+<br>
            <label for="inputAddress2">Address 2</label>
             <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment/street/area"
               matInput
@@ -96,9 +92,9 @@
               ngModelname="Address2"
               [ngClass]="{ 'is-invalid': userform.submitted && Address2.invalid }"
               minlength="15">
-          </div>
-          <div class="form-row">
-            <div class="form-group col-md-6">
+
+<br>
+
               <label for="inputCity">City</label>
               <input type="text" class="form-control" id="inputCity"
               matInput
@@ -109,8 +105,7 @@
               ngModelname="Address2"
               [ngClass]="{ 'is-invalid': userform.submitted && City.invalid }"
               minlength="10">
-            </div>
-            <div class="form-group col-md-4">
+
               <label for="inputState">State</label>
               <select id="inputState" class="form-control"
               matInput
@@ -159,8 +154,7 @@
                 <option>Lakshadweep</option>
                 <option>Puducherry</option>
               </select>
-            </div><br><br>
-            <div class="form-group col-md-2">
+
               <label for="inputZip">Zip</label>
               <input type="text" class="form-control" id="inputZip"
               matInput
@@ -172,11 +166,10 @@
               [ngClass]="{ 'is-invalid': userform.submitted && Zip.invalid }"
               minlength="10">
             </div>
-          </div>
-         </div>
+
         </form>
       <div class="modal-footer">
-       <button type="submit" mat-raised-button class="btn-dark rounded-pill" id="save" btn-dark>Save</button>
+       <button type="submit" (click)="addAddress(userform)" mat-raised-button class="btn-dark rounded-pill" id="save" btn-dark>Save</button>
        <button type="submit"  mat-raised-button class="btn-dark rounded-pill" data-dismiss="modal" id="close" btn-dark>Close</button>
       </div>
     </div>

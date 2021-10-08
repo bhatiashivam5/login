@@ -1,3 +1,5 @@
+
+require('./registerModel')
 const mongoose = require('mongoose');
 
 var addressSchema = mongoose.Schema({
@@ -22,6 +24,7 @@ var addressSchema = mongoose.Schema({
   Zip:{
     type:String
   },
+
 
 });
 

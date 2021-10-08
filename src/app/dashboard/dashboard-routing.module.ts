@@ -9,17 +9,17 @@ const dashboardrouting:Routes=[
   {
     path:'dashboard',
     component:DashboardComponent,
-    canActivate: [ AuthGuard ],
+    canActivate:[AuthGuard],
     children:[
       {
         path:'address',
         component:AddressComponent,
-        canActivate: [ AuthGuard ],
+
       },
       {
         path:'profile',
         component:ProfileComponent,
-        canActivate: [ AuthGuard ],
+
       },
 
     ]

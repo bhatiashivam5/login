@@ -1,0 +1,29 @@
+#home{
+  margin: 5% 0 0 5%;
+}
+
+#label{
+  font-weight: bold;
+  width: 50% !important;
+}
+.col-md-6{
+  width: 50%;
+}
+
+.tool{
+  font-weight: bold;
+}
+.mat-card{
+  width: 65%;
+}
+
+.welcome{
+  font-weight: bold;
+  margin-top: 20%;
+}
+.row1{
+  margin-top: 20%;
+}
+#btn{
+  margin-left: 52%;
+}
